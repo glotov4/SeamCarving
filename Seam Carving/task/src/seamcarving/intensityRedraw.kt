@@ -4,10 +4,10 @@ import java.awt.Color
 import java.awt.image.BufferedImage
 
 /** Calculate intensity by normalizing energy **/
-fun intensityRedraw(inputImage: BufferedImage, energyList: MutableList<MutableList<Double>>, maxEnergy: Double, outputImage: BufferedImage) {
+fun intensityRedraw(outputImage: BufferedImage, energyList: MutableList<MutableList<Double>>, maxEnergy: Double) {
 
-    val width = inputImage.width
-    val height = inputImage.height
+    val width = outputImage.width
+    val height = outputImage.height
 
     for (x0 in 0 until width)
         for (y0 in 0 until height) {

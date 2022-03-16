@@ -21,17 +21,15 @@ fun main( args:Array<String> ) {
     val energyList = findEnergy(inputImage)
 
     /** Find pixel with the lowest energy to start with  **/
-    /** lookup pixels in front of starting pixel (account for border cases) **/
-    /** go to the pixel with the lowest energy **/
-    /** stop **/
-
 
 
     /** Calculate maxEnergy of pixels in the image **/
-    val maxEnergy = findMaxEnergy(energyList)
+//    val maxEnergy = findMaxEnergy(energyList)
 
     /** Calculate intensity by normalizing energy & change color of pixels accordingly **/
-    intensityRedraw(inputImage, energyList, maxEnergy, outputImage)
+//    intensityRedraw(outputImage, energyList, maxEnergy)
+
+    seam(outputImage, energyList)
 
     fun saveImage(image: BufferedImage, imageFile: File) {
         ImageIO.write(image, "png", imageFile)
