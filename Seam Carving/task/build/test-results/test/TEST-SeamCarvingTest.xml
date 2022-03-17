@@ -1,49 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SeamCarvingTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-03-16T19:30:46" hostname="DESKTOP-DK23N7A" time="0.153">
+<testsuite name="SeamCarvingTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-03-17T20:40:26" hostname="DESKTOP-DK23N7A" time="0.115">
   <properties/>
-  <testcase name="start" classname="SeamCarvingTest" time="0.153">
-    <failure message="java.lang.AssertionError: Wrong answer in test #1&#10;&#10;Total energy of your seam (469.438331) does not match expected value (466.371057 +/- 0.000010)&#10;&#10;Please find below the output of your program during this failed test.&#10;&#10;---&#10;&#10;Arguments: -in test/small.png -out test/small-seam.png&#10;&#10;0 &amp; 0&#10;java.awt.Color[r=27,g=227,b=0]&#10;java.awt.Color[r=49,g=246,b=49]&#10;3246&#10;java.awt.Color[r=27,g=227,b=0]&#10;java.awt.Color[r=148,g=222,b=122]&#10;29550&#10;181.09665927343883&#10;0 &amp; 1&#10;java.awt.Color[r=143,g=203,b=92]&#10;java.awt.Color[r=181,g=236,b=192]&#10;12533&#10;java.awt.Color[r=27,g=227,b=0]&#10;java.awt.Color[r=148,g=222,b=122]&#10;29550&#10;205.14141463878033&#10;1 &amp; 0&#10;java.awt.Color[r=27,g=227,b=0]&#10;java.awt.Color[r=49,g=246,b=49]&#10;3246&#10;java.awt.Color[r=25,g=229,b=0]&#10;java.awt.Color[r=185,g=223,b=183]&#10;59125&#10;249.7418667344344&#10;1 &amp; 1&#10;java.awt.Color[r=143,g=203,b=92]&#10;java.awt.Color[r=181,g=236,b=192]&#10;12533&#10;java.awt.Color[r=25,g=229,b=0]&#10;java.awt.Color[r=185,g=223,b=183]&#10;59125&#10;267.6901193544506" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #1
+  <testcase name="start" classname="SeamCarvingTest" time="0.115">
+    <failure message="java.lang.AssertionError: Wrong answer in test #1&#10;&#10;Total energy of your seam (469.438331) does not match expected value (466.371057 +/- 0.000010)&#10;&#10;Arguments: -in test/small.png -out test/small-seam.png" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #1
 
 Total energy of your seam (469.438331) does not match expected value (466.371057 +/- 0.000010)
 
-Please find below the output of your program during this failed test.
-
----
-
 Arguments: -in test/small.png -out test/small-seam.png
-
-0 &amp; 0
-java.awt.Color[r=27,g=227,b=0]
-java.awt.Color[r=49,g=246,b=49]
-3246
-java.awt.Color[r=27,g=227,b=0]
-java.awt.Color[r=148,g=222,b=122]
-29550
-181.09665927343883
-0 &amp; 1
-java.awt.Color[r=143,g=203,b=92]
-java.awt.Color[r=181,g=236,b=192]
-12533
-java.awt.Color[r=27,g=227,b=0]
-java.awt.Color[r=148,g=222,b=122]
-29550
-205.14141463878033
-1 &amp; 0
-java.awt.Color[r=27,g=227,b=0]
-java.awt.Color[r=49,g=246,b=49]
-3246
-java.awt.Color[r=25,g=229,b=0]
-java.awt.Color[r=185,g=223,b=183]
-59125
-249.7418667344344
-1 &amp; 1
-java.awt.Color[r=143,g=203,b=92]
-java.awt.Color[r=181,g=236,b=192]
-12533
-java.awt.Color[r=25,g=229,b=0]
-java.awt.Color[r=185,g=223,b=183]
-59125
-267.6901193544506
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:155)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -90,38 +53,6 @@ java.awt.Color[r=185,g=223,b=183]
   </testcase>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
-0 & 0
-java.awt.Color[r=27,g=227,b=0]
-java.awt.Color[r=49,g=246,b=49]
-3246
-java.awt.Color[r=27,g=227,b=0]
-java.awt.Color[r=148,g=222,b=122]
-29550
-181.09665927343883
-0 & 1
-java.awt.Color[r=143,g=203,b=92]
-java.awt.Color[r=181,g=236,b=192]
-12533
-java.awt.Color[r=27,g=227,b=0]
-java.awt.Color[r=148,g=222,b=122]
-29550
-205.14141463878033
-1 & 0
-java.awt.Color[r=27,g=227,b=0]
-java.awt.Color[r=49,g=246,b=49]
-3246
-java.awt.Color[r=25,g=229,b=0]
-java.awt.Color[r=185,g=223,b=183]
-59125
-249.7418667344344
-1 & 1
-java.awt.Color[r=143,g=203,b=92]
-java.awt.Color[r=181,g=236,b=192]
-12533
-java.awt.Color[r=25,g=229,b=0]
-java.awt.Color[r=185,g=223,b=183]
-59125
-267.6901193544506
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

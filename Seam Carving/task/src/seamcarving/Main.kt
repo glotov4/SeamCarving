@@ -20,16 +20,21 @@ fun main( args:Array<String> ) {
     /** Calculate energy of every pixel & store it in the energyList **/
     val energyList = findEnergy(inputImage)
 
-    /** Find pixel with the lowest energy to start with  **/
+    /** Store all the seams of the image List[x][y](lowEnergyX)  **/
+    val seamList = seam(inputImage, energyList)
+
+    /** Calculate energy of every seam  **/
+    val seamEnergyList = seamEnergy(inputImage, energyList, seamList )
+
+    /** Find and color the seam with the lowest energy  **/
+    val seamMinEnergy = seamMinEnergy(outputImage, seamEnergyList, seamList)
 
 
-    /** Calculate maxEnergy of pixels in the image **/
+    /** DEPRECATED - Calculate maxEnergy of pixels in the image **/
 //    val maxEnergy = findMaxEnergy(energyList)
 
-    /** Calculate intensity by normalizing energy & change color of pixels accordingly **/
+    /** DEPRECATED - Calculate intensity by normalizing energy & change color of pixels accordingly **/
 //    intensityRedraw(outputImage, energyList, maxEnergy)
-
-    seam(outputImage, energyList)
 
     fun saveImage(image: BufferedImage, imageFile: File) {
         ImageIO.write(image, "png", imageFile)
