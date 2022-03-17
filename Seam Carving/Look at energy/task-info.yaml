@@ -202,10 +202,10 @@ files:
 - name: test/small-energy.png
   visible: true
   learner_created: true
-- name: test/blue-energy.png
+- name: test/trees-energy.png
   visible: true
   learner_created: true
-- name: test/trees-energy.png
+- name: test/blue-energy.png
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/learn/step/9017#comment
@@ -213,4 +213,4 @@ status: Solved
 feedback:
   message: Congratulations!
   time: Sat, 12 Mar 2022 12:29:44 UTC
-record: -1
+record: 5

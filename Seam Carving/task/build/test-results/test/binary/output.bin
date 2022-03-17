@@ -1,6 +1,34 @@
 [1;31m
 Start test 1[0m
-[1;31m
-Start test 2[0m
-[1;31m
-Start test 3[0m
+0 & 0
+ java.awt.Color[r=27,g=227,b=0]
+!java.awt.Color[r=49,g=246,b=49]
+3246
+ java.awt.Color[r=27,g=227,b=0]
+#java.awt.Color[r=148,g=222,b=122]
+29550
+181.09665927343883
+0 & 1
+"java.awt.Color[r=143,g=203,b=92]
+#java.awt.Color[r=181,g=236,b=192]
+12533
+ java.awt.Color[r=27,g=227,b=0]
+#java.awt.Color[r=148,g=222,b=122]
+29550
+205.14141463878033
+1 & 0
+ java.awt.Color[r=27,g=227,b=0]
+!java.awt.Color[r=49,g=246,b=49]
+3246
+ java.awt.Color[r=25,g=229,b=0]
+#java.awt.Color[r=185,g=223,b=183]
+59125
+249.7418667344344
+1 & 1
+"java.awt.Color[r=143,g=203,b=92]
+#java.awt.Color[r=181,g=236,b=192]
+12533
+ java.awt.Color[r=25,g=229,b=0]
+#java.awt.Color[r=185,g=223,b=183]
+59125
+267.6901193544506
