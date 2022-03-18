@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SeamCarvingTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-03-17T20:40:26" hostname="DESKTOP-DK23N7A" time="0.115">
+<testsuite name="SeamCarvingTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-03-18T05:38:31" hostname="DESKTOP-DK23N7A" time="0.116">
   <properties/>
-  <testcase name="start" classname="SeamCarvingTest" time="0.115">
-    <failure message="java.lang.AssertionError: Wrong answer in test #1&#10;&#10;Total energy of your seam (469.438331) does not match expected value (466.371057 +/- 0.000010)&#10;&#10;Arguments: -in test/small.png -out test/small-seam.png" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #1
+  <testcase name="start" classname="SeamCarvingTest" time="0.116">
+    <failure message="java.lang.AssertionError: Wrong answer in test #1&#10;&#10;Total energy of your seam (469.438331) does not match expected value (466.371057 +/- 0.000010)&#10;&#10;Please find below the output of your program during this failed test.&#10;&#10;---&#10;&#10;Arguments: -in test/small.png -out test/small-seam.png&#10;&#10;469.4383310675887&#10;kotlin.Unit" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #1
 
 Total energy of your seam (469.438331) does not match expected value (466.371057 +/- 0.000010)
 
+Please find below the output of your program during this failed test.
+
+---
+
 Arguments: -in test/small.png -out test/small-seam.png
+
+469.4383310675887
+kotlin.Unit
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:155)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -53,6 +60,7 @@ Arguments: -in test/small.png -out test/small-seam.png
   </testcase>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
+469.4383310675887
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

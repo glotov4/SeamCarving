@@ -28,7 +28,7 @@ fun main( args:Array<String> ) {
 
     /** Find and color the seam with the lowest energy  **/
     val seamMinEnergy = seamMinEnergy(outputImage, seamEnergyList, seamList)
-
+    print(seamMinEnergy)
 
     /** DEPRECATED - Calculate maxEnergy of pixels in the image **/
 //    val maxEnergy = findMaxEnergy(energyList)
