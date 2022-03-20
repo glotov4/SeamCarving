@@ -3,20 +3,16 @@ package seamcarving
 import java.awt.Color
 import java.awt.image.BufferedImage
 
-fun seam(inputImage: BufferedImage, energyList: MutableList<MutableList<Double>>) : MutableList<MutableList<Int>> {
-    // TODO: make width + height global variables
+fun seam(energyList: MutableList<MutableList<Double>>) : MutableList<MutableList<Int>> {
 
-    val width = inputImage.width
-    val height = inputImage.height
-
-    // 2D array
-    val seamList = MutableList(width) { MutableList(height) { 0 } }
+    // 2D array. TODO: Make seamList a list of maps (pixel:energy)
+    val seamList = MutableList(WIDTH) { MutableList(HEIGHT) { 0 } }
 
     // startX -> lookup 3 pixels in front -> find pixel with the lowest energy -> save pixel's cords & energy -> repeat
-    for (x in 0 until width) {
+    for (x in 0 until WIDTH) {
         seamList[x][0] = x
         var activeX = x
-        for (y in 0 until height - 1) {
+        for (y in 0 until HEIGHT - 1) {
 
             // firstX & lastX - boundaries for lookup function. depend on border cases
             var leftBoundaryX: Int
@@ -27,7 +23,7 @@ fun seam(inputImage: BufferedImage, energyList: MutableList<MutableList<Double>>
                     leftBoundaryX = activeX
                     rightBoundaryX = activeX + 1
                 }
-                width - 1 -> {
+                WIDTH - 1 -> {
                     leftBoundaryX = activeX - 1
                     rightBoundaryX = activeX
                 }

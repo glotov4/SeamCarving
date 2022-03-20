@@ -305,6 +305,45 @@ files:
 - name: test/trees.png
   visible: false
   learner_created: false
+- name: src/seamcarving/findEnergy.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/findMaxEnergy.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/dijkstras.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/seamMinEnergy.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/seam.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/findHorizontalSeam.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/seamEnergy.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/test.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/intensityRedraw.kt
+  visible: true
+  learner_created: true
+- name: test/small-seam-hor.png
+  visible: true
+  learner_created: true
+- name: test/trees-seam-hor.png
+  visible: true
+  learner_created: true
+- name: test/blue-seam-hor.png
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/9019#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Fri, 18 Mar 2022 14:46:47 UTC
 record: -1

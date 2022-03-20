@@ -5,10 +5,10 @@ import java.awt.image.BufferedImage
 import kotlin.math.sqrt
 
 /** Calculate energy of every pixel & store it in the energyList **/
-fun findEnergy(inputImage: BufferedImage) : MutableList<MutableList<Double>> {
+fun findEnergy(image: BufferedImage) : MutableList<MutableList<Double>> {
 
-    val width = inputImage.width
-    val height = inputImage.height
+    val width = image.width
+    val height = image.height
 
     val energyList = MutableList(width) {MutableList(height) {0.0} }
     // calculate energy
@@ -30,15 +30,15 @@ fun findEnergy(inputImage: BufferedImage) : MutableList<MutableList<Double>> {
             }
 
             // calculate gradients X & Y
-            val minusX = Color(inputImage.getRGB(x1 - 1, y1), false)
-            val plusX = Color(inputImage.getRGB(x1 + 1, y1), false)
+            val minusX = Color(image.getRGB(x1 - 1, y1), false)
+            val plusX = Color(image.getRGB(x1 + 1, y1), false)
             val rX = minusX.red - plusX.red
             val gX = minusX.green - plusX.green
             val bX = minusX.blue - plusX.blue
             val gradientX = (rX * rX) + (gX * gX) + (bX * bX)
 
-            val minusY = Color(inputImage.getRGB(x2, y2 - 1), false)
-            val plusY = Color(inputImage.getRGB(x2, y2 + 1), false)
+            val minusY = Color(image.getRGB(x2, y2 - 1), false)
+            val plusY = Color(image.getRGB(x2, y2 + 1), false)
             val rY = minusY.red - plusY.red
             val gY = minusY.green - plusY.green
             val bY = minusY.blue - plusY.blue

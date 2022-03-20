@@ -325,21 +325,24 @@ files:
 - name: src/seamcarving/seamMinEnergy.kt
   visible: true
   learner_created: true
+- name: src/seamcarving/dijkstras.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/test.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/findHorizontalSeam.kt
+  visible: true
+  learner_created: true
+- name: test/blue-seam.png
+  visible: true
+  learner_created: true
+- name: test/trees-seam.png
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/9018#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #1
-
-    Total energy of your seam (469.438331) does not match expected value (466.371057 +/- 0.000010)
-
-    Please find below the output of your program during this failed test.
-
-    ---
-
-    Arguments: -in test/small.png -out test/small-seam.png
-
-    469.4383310675887
-    kotlin.Unit
-  time: Fri, 18 Mar 2022 05:38:31 UTC
+  message: Congratulations!
+  time: Fri, 18 Mar 2022 14:35:11 UTC
 record: 4

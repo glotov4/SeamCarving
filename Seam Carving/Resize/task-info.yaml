@@ -219,6 +219,36 @@ files:
 - name: test/trees.png
   visible: false
   learner_created: false
+- name: src/seamcarving/findEnergy.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/findMaxEnergy.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/dijkstras.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/seamMinEnergy.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/seam.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/findHorizontalSeam.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/seamEnergy.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/test.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/intensityRedraw.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/removeSeam.kt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/9020#comment
 status: Unchecked
 record: -1
