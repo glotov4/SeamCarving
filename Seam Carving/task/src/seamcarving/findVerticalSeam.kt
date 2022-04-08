@@ -14,35 +14,37 @@ fun findVerticalSeam(image: BufferedImage, energyList: MutableList<MutableList<D
     for (row in minEnergyToBot.indices)
         minEnergyToBot[row] = energyList[row]
 
-    var minimum: Double
-    for (row in height - 2 downTo 1) // start witn pre-last, stop at 0 bc it looks down
-        for (x in 0 until width) {
-            minimum = when (x) {
-                0 -> minOf(
-                    minEnergyToBot[x][row + 1],
-                    minEnergyToBot[x + 1][row + 1])
-                width - 1 -> minOf(
-                    minEnergyToBot[x][row + 1],
-                    minEnergyToBot[x - 1][row + 1])
-                else -> minOf(
-                    minEnergyToBot[x][row - 1],
-                    minEnergyToBot[x + 1][row + 1],
-                    minEnergyToBot[x - 1][row + 1]
-                )
-            }
-            minEnergyToBot[x][row] = energyList[x][row] + minimum
-        }
-
 //    var minimum: Double
-//    for (row in 1 until height)
-//        for (x in 1 until width) { // find minimum energy pixel in the next row (lookup 2-3 pixels)
-//            minimum = when (x) { //topMiddle(x,y-1) topLeft(x-1, y-1) topRight(x+1, y-1)
-//                0 -> minOf(minEnergyToBot[x][row - 1], minEnergyToBot[x + 1][row - 1])
-//                width - 1-> minOf(minEnergyToBot[x][row - 1], minEnergyToBot[x - 1][row - 1])
-//                else -> minOf(minEnergyToBot[x - 1][row - 1], minEnergyToBot[x][row - 1], minEnergyToBot[x + 1][row - 1])
-//            }
-//            minEnergyToBot[x][row] = energyList[x][row] + minimum // add energy of that pixel to dpEnergy
-//        }
+//    for (row in 1 .. height - 2) // start witn pre-last, stop at 1 bc it looks down
+//        for (x in 0 until width) {
+////            for (row in height - 2 downTo 1) // start witn pre-last, stop at 1 bc it looks down
+////                for (x in 0 until width) {
+//                    minimum = when (x) {
+//                        0 -> minOf(
+//                            minEnergyToBot[x][row + 1],
+//                            minEnergyToBot[x + 1][row + 1])
+//                        width - 1 -> minOf(
+//                            minEnergyToBot[x][row + 1],
+//                            minEnergyToBot[x - 1][row + 1])
+//                        else -> minOf(
+//                            minEnergyToBot[x][row + 1],
+//                            minEnergyToBot[x + 1][row + 1],
+//                            minEnergyToBot[x - 1][row + 1]
+//                        )
+//                    }
+//                    minEnergyToBot[x][row] = minEnergyToBot[x][row] + minimum
+//                }
+
+    var minimum: Double
+    for (row in 1 until height)
+        for (x in 1 until width) { // find minimum energy pixel in the next row (lookup 2-3 pixels)
+            minimum = when (x) { //topMiddle(x,y-1) topLeft(x-1, y-1) topRight(x+1, y-1)
+                0 -> minOf(minEnergyToBot[x][row - 1], minEnergyToBot[x + 1][row - 1])
+                width - 1-> minOf(minEnergyToBot[x][row - 1], minEnergyToBot[x - 1][row - 1])
+                else -> minOf(minEnergyToBot[x - 1][row - 1], minEnergyToBot[x][row - 1], minEnergyToBot[x + 1][row - 1])
+            }
+            minEnergyToBot[x][row] = energyList[x][row] + minimum // add energy of that pixel to dpEnergy
+        }
 
     //indexOfMin = extension function to find index (column) of minimal value
     // we search for indexOfMin in the last row because...

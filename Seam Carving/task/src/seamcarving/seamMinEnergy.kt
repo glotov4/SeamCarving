@@ -14,7 +14,6 @@ fun seamMinEnergy (outputImage: BufferedImage, seamEnergyList: MutableList<Doubl
             seamMinEnergyX = x
         }
 
-
     for (y in 0 until HEIGHT) {
         outputImage.setRGB(seamList[seamMinEnergyX][y], y, Color.RED.rgb)
     }

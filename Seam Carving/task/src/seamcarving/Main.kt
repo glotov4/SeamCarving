@@ -1,6 +1,5 @@
 package seamcarving
 
-import java.awt.Color
 import java.awt.image.BufferedImage
 import java.io.File
 import javax.imageio.ImageIO
@@ -14,8 +13,8 @@ fun main( args:Array<String> ) {
     /** Read arguments, process inputImage, copy it to outputImage **/
     val inputFileName = args[1]
     val outputFileName = args[3]
-    val toRemoveHorizontal = args[5].toInt()
-    val toRemoveVertical = args[7].toInt()
+    val toRemoveWidth = args[5].toInt()
+    val toRemoveHeight = args[7].toInt()
 
     val inputImageFile = File(inputFileName)
     val outputImageFile = File(outputFileName)
@@ -30,20 +29,26 @@ fun main( args:Array<String> ) {
     val energyList = findEnergy(inputImage)
 
     /** findVerticalSeam **/
-    val verticalSeam = findVerticalSeam(inputImage, energyList)
+//    val verticalSeam = findVerticalSeam(inputImage, energyList)
 
     /** toRemoveVertical **/
-//    outputImage = removeSeam(inputImage, toRemoveVertical)
+    outputImage = imageWithRemovedWSeams(inputImage, toRemoveWidth)
+    outputImage = outputImage.getTransposed()
+    outputImage = imageWithRemovedWSeams(outputImage, toRemoveHeight)
+    outputImage = outputImage.getTransposed()
+
+//    val imageTest = imageWithRemovedWSeams(inputImage, toRemoveWidth)
+//    val energyListTest = findEnergy(imageTest)
 
 
 
     /** colorSeam **/
-    fun colorSeam(seam: MutableList<Int>) {
-        for (y in seam.indices) {
-            outputImage.setRGB(seam[y], y,  Color.RED.rgb)
-        }
-    }
-    colorSeam(verticalSeam)
+//    fun colorSeam(seam: MutableList<Int>) {
+//        for (y in seam.indices) {
+//            outputImage.setRGB(seam[y], y,  Color.RED.rgb)
+//        }
+//    }
+//    colorSeam(verticalSeam)
 
     /** Store all the seams of the image List[x][y](lowEnergyX)  **/
 //    val seamList = seam(energyList)
@@ -57,9 +62,12 @@ fun main( args:Array<String> ) {
 
     /** DEPRECATED - Calculate maxEnergy of pixels in the image **/
 //    val maxEnergy = findMaxEnergy(energyList)
+//    val maxEnergyTest = findMaxEnergy(energyListTest)
 
     /** DEPRECATED - Calculate intensity by normalizing energy & change color of pixels accordingly **/
 //    intensityRedraw(outputImage, energyList, maxEnergy)
+//    intensityRedraw(imageTest, energyListTest, maxEnergyTest)
+//    outputImage = imageTest
 
     fun saveImage(image: BufferedImage, imageFile: File) {
         ImageIO.write(image, "png", imageFile)
